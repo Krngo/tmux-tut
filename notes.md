@@ -1,7 +1,6 @@
 tmux-tut
 ========
 
-
 source https://www.youtube.com/watch?v=wKEGA8oEWXw
 
 is a Terminal Multiplexer
@@ -13,10 +12,10 @@ install
 start
 
     $tmux
-
+    
 exit
 
-   $exit
+    $exit
 
 how it works
 -------------
@@ -34,7 +33,7 @@ repoen terminal, and continue work on vim
 
     $tmux attach
 
-keys
+basic keys
 ---------
 
 default PREFIX is ctrl+b, press prefix and then command,, ex to detach from sessio
@@ -48,9 +47,6 @@ get help
     PREFIX, ?
 
 has alot of keybindings
-
-keys
--------
 
 to create new window
 
@@ -67,5 +63,38 @@ go to previous window, yes you guessed it
 go to #windows
 
     PREFIX [0-9] = go to window number
+
+copy mode = scrollback
+---------------------
+to scrol a window up and/or select output to copy we need to enter "copy mode"
+
+    PREFIX, [
+    
+WTF?!
+
+press arows to move, space to start highlight, enter to copy. 
+
+to paste 
+
+    PREFIX, ]
+
+
+interesting feature
+-----------------
+tmux can "attach" multiple terminals, lolac or remote to share the same screen. example
+
+start tmux on terminator, then vim
+
+    $tmux 
+    $vim
+    
+then start another terminal, ex gnome-termninal and attach to session
+
+    $tmux attach
+    
+now both terminals show the same session, what I type in one shows in the other. This is, they say usufull for paralell programing
+
+
+
 
 
